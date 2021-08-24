@@ -1,0 +1,20 @@
+#logoHenry {
+  margin-right: 20px;
+}
+
+.navbar {
+  background-color: #dba8f0;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+span {
+  margin-left: 5px;
+  margin-right: 60%;
+  display: flex;
+  color: white;
+  align-self: flex-start;
+}
