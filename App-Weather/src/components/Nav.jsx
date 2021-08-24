@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../Logo.png'
+import Logo from '../utils/Logo.png'
 import SearchBar from './SearchBar.jsx';
 import './Nav.css';
 
