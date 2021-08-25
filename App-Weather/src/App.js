@@ -2,7 +2,8 @@ import React, {useState} from 'react';
 import Nav from './components/Nav'
 import Cards from './components/Cards'
 import City from './components/City.jsx';
-import { Route } from 'react-router-dom';
+import NotFound from './components/NotFound.jsx';
+import { Route, Switch } from 'react-router-dom';
 import './App.css';
 
 export default function App() {
@@ -17,16 +18,17 @@ function onSearch(ciudad) {
       if(recurso.main !== undefined){
         const ciudad = {
           min: Math.round(recurso.main.temp_min),
-          max: Math.round(recurso.main.temp_max),
-          img: recurso.weather[0].icon,
-          id: recurso.id,
-          wind: recurso.wind.speed,
-          temp: recurso.main.temp,
-          name: recurso.name,
-          weather: recurso.weather[0].main,
-          clouds: recurso.clouds.all,
-          latitud: recurso.coord.lat,
-          longitud: recurso.coord.lon
+            max: Math.round(recurso.main.temp_max),
+            img: recurso.weather[0].icon,
+            id: recurso.id,
+            wind: recurso.wind.speed,
+            temp: recurso.main.temp,
+            name: recurso.name,
+            country: recurso.sys.country,
+            weather: recurso.weather[0].main,
+            clouds: recurso.clouds.all,
+            latitud: recurso.coord.lat,
+            longitud: recurso.coord.lon
       };
       setCities(oldCities => {
         let checkIfExistCity = oldCities.findIndex(i => i.id === ciudad.id);
@@ -55,7 +57,10 @@ function onFilter(ciudadId) {
 return (
   <div className="App">
     <Route path='/' render={() => <Nav onSearch={onSearch} />}/>
-    <Route exact path='/' render={() => <Cards cities={cities} onClose={onClose} />}/>
+    <Switch>
     <Route exact path='/ciudad/:ciudadId' render={({match}) => <City city={onFilter(match.params.ciudadId)} />}/>
+    <Route path="/" exact render={() =>  <Cards cities={cities} onClose={onClose} />} />
+    <Route component={NotFound} />
+    </Switch>
   </div>
 )};

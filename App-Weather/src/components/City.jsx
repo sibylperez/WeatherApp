@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './Card.module.css';
+import NotFound from './NotFound';
 
 export default function Ciudad({city}) {
     if(city) {
@@ -21,7 +22,7 @@ export default function Ciudad({city}) {
     }else {
         return (
             <div>
-                No se encontro la ciudad buscada
+                <NotFound />
             </div>
         );
     }
