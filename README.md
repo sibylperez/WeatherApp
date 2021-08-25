@@ -12,6 +12,10 @@ Este proyecto fue desarrollado con [Create React App](https://github.com/faceboo
 
 ## Scripts
 
+Instalamos las dependecias incluidas en el package.json
+
+### `npm install`
+
 El proyecto se inicializa utilizando:
 
 ### `npm start`
