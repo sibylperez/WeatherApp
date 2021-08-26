@@ -20,7 +20,10 @@ El proyecto se inicializa utilizando:
 
 ### `npm start`
 
-Corres la aplicación en modo desarrollo.\
+Corres la aplicación en modo desarrollo.
+
 Abre en el portal [http://localhost:3000](http://localhost:3000) visto desde tu browser.
+
+![WeatherApp](https://user-images.githubusercontent.com/51963634/131011138-c6472078-c229-4090-a48f-222c466d8c6d.png)
 
 
