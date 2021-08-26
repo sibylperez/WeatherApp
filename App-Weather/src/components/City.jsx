@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './Card.module.css';
-import NotFound from './NotFound';
+import NotFound from './NotFound.jsx';
 
 export default function Ciudad({city}) {
     if(city) {

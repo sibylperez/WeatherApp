@@ -1,6 +1,3 @@
-#logoHenry {
-  margin-right: 20px;
-}
 
 .navbar {
   background-color: #dba8f0;
@@ -12,8 +9,12 @@
 }
 
 span {
+  font-family: 'Lobster', cursive;
+  font-size: 25px;
+  color: black;
   margin-left: 5px;
   margin-right: 60%;
+  margin-top: 8px;
   display: flex;
   color: white;
   align-self: flex-start;
